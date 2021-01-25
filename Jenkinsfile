@@ -64,6 +64,7 @@ pipeline {
 		
         stage('Code Checkout') {
             steps {
+				sh 'echo "Checkout here"'
                 checkout([
                     $class: 'GitSCM', 
                     branches: [[name: '*/master']], 
